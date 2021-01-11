@@ -1,0 +1,126 @@
+Exercise 1.1
+
+ls
+
+Exercise 1.2
+
+man ls
+ls -l
+The command gives out the username, file size, date modified and file location, amongst others
+Ls -aS
+
+Exercise 2.1
+pwd
+print working directory
+Users/khoatran
+
+Exercise 2.2
+cd stands for change directory
+cd Desktop \shell_magic
+
+
+Exercise 3.1
+touch hello world doesn’t work cause of the space between the names, it just make the files “hello” and “world”
+
+Exercise 3.2
+mkdir stands for make directory
+mkdir hello_world
+
+Exercise 3.3
+mv stands for move
+Creating an hello_world file doesn’t work because there is already a file with the same name
+
+touch hello_world.bfe
+
+mv hello_world.bfe hello_world.txt
+
+mv hello_world.txt hello_world
+
+Exercise 3.4
+
+Moving shifts the file from one location to another, copy creates a duplicate of the file
+
+cp hello_world.txt hello_world
+cp hello_world.txt hello_world
+
+mv hello_world.txt world_hello.txt
+
+
+Exercise 3.5
+
+rm probably stands for remove
+
+rm world_hello.txt
+
+There is a message saying hello_world is a directory
+
+rm -r hello_world
+
+
+Exercise 4.1
+cat stands for concatenate
+
+cat hello_world.txt
+
+I dont see anything
+
+
+Exercise 4.2
+
+The command echo writes arguments to the standard output
+
+echo 'file contents' > file.txt
+
+echo 'yeah yeahh' >> file.txt
+
+
+Exercise 4.3
+
+echo Desktop > home_contents.list
+
+ls -R ~ > home_contents.list
+
+less home_contents.list
+
+Exercise 5.1
+
+wc stands for word count
+% wc home_contents.list
+
+cat home_contents.list | wc 
+
+No differences
+
+Under the hood, cat outputs the content of home_content.list to the shell, and then the wc command counts the words included
+
+ls ~ | wc
+
+Exercise 5.2
+
+echo 'hello world \n world hello' > helloworld.txt
+
+grep 'world' helloworld.txt
+
+The output “hello world world hello”
+
+touch worldhello.txt
+
+echo 'world hello' > worldhello.txt
+
+grep 'hello' worldhello.txt helloworld.txt
+
+Output:
+
+worldhello.txt:world hello
+helloworld.txt:hello world 
+helloworld.txt: world hello
+
+
+Exercise 5.3
+
+grep ‘hello’ helloworld.txt
+
+cat helloworld.txt | grep ‘world’ |  wc | less
+
+Exercise 6.1
+
